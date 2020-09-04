@@ -1,0 +1,111 @@
+// Buttons
+.fc-button-group {
+  @extend .btn-group;
+}
+
+.fc-button {
+  @extend .btn;
+  @extend .btn-primary;
+
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+
+  &.fc-state-active {
+    color: color-yiq(darken($primary, 7.5%));
+    @include gradient-bg(darken($primary, 7.5%));
+    border-color: darken($primary, 10%);
+  }
+  &.fc-button-primary {
+    color: color-yiq(darken($primary, 7.5%));
+    @include gradient-bg(darken($primary, 7.5%));
+    border-color: darken($primary, 10%);
+  }
+}
+
+// Borders
+th,
+td {
+  border-color: $gray-200;
+}
+
+// Events
+.fc-event .fc-content {
+  color: $white;
+  padding: 0.25rem;
+}
+
+.fc-event,
+.fc-event-dot {
+  background: $secondary;
+  border-color: $secondary;
+}
+
+// Header
+.fc-toolbar h2 {
+  font-size: $h4-font-size;
+}
+
+// Today
+td.fc-today {
+  background: $gray-100;
+}
+
+// Day grid
+.fc-day-grid td:not(.fc-axis) {
+  padding: 0.25rem;
+}
+
+.fc-day-grid td:not(.fc-axis).fc-event-container {
+  padding: 0.2rem 0.5rem;
+}
+
+// Axis
+.fc-axis {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+// Scroller
+.fc-scroller .fc-content-col {
+  padding: 0.5rem 0.5rem;
+}
+
+// Week and day
+th.fc-week-number,
+th.fc-day-header {
+  padding: 0.75rem 0.25rem;
+}
+
+// List items
+.fc-list-heading .fc-widget-header {
+  padding: 0.75rem 1.25rem;
+}
+
+.fc-list-heading .fc-list-heading-main,
+.fc-list-heading .fc-list-heading-alt {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.fc-list-heading .fc-list-heading-main {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.fc-list-item td {
+  padding: 0.75rem 1.25rem;
+}
+
+.fc-list-item .fc-event-dot {
+  border-radius: 50%;
+}
+
+// Highlight
+.fc-row .fc-highlight-skeleton {
+  opacity: 1;
+}
+
+.fc-row .fc-highlight-skeleton .fc-highlight {
+  background: $gray-400;
+}
